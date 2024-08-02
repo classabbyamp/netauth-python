@@ -1,3 +1,51 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netauth"
+authors = [
+    {name = "classabbyamp", email = "dev@placeviolette.net"}
+]
+description = "NetAuth client library"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["secure-access", "authentication-service", "netauth"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+packages=["netauth"]
+dynamic = ["version"]
+dependencies = [
+    "grpcio",
+]
+
+[project.optional-dependencies]
+dev = [
+    "grpcio-tools",
+]
+ci = [
+    "ruff",
+]
+test = [
+    "pytest",
+]
+publish = [
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://netauth.org"
+Documentation = "https://python.netauth.org"
+Repository = "https://github.com/netauth/python"
+Changelog = "https://github.com/netauth/python/blob/master/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = {attr = "netauth.__version__"}
+
 [tool.ruff]
 include = ["netauth/**", "setup.py"]
 exclude = ["netauth/_pb"]
