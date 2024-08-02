@@ -1,0 +1,12 @@
+[tool.ruff]
+include = ["netauth/**", "setup.py"]
+exclude = ["netauth/_pb"]
+line-length = 120
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
