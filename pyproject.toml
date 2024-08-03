@@ -27,6 +27,13 @@ dependencies = [
 dev = [
     "grpcio-tools",
 ]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-toolbox",
+    "sphinx-autodoc-typehints",
+    "enum-tools",
+]
 ci = [
     "ruff",
 ]
