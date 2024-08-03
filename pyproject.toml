@@ -17,7 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-packages=["netauth"]
 dynamic = ["version"]
 dependencies = [
     "grpcio",
@@ -47,14 +46,17 @@ publish = [
 [project.urls]
 Homepage = "https://netauth.org"
 Documentation = "https://python.netauth.org"
-Repository = "https://github.com/netauth/python"
-Changelog = "https://github.com/netauth/python/blob/master/CHANGELOG.md"
+Repository = "https://github.com/netauth/netauth-python"
+Changelog = "https://github.com/netauth/netauth-python/blob/master/CHANGELOG.md"
+
+[tool.setuptools]
+packages=["netauth"]
 
 [tool.setuptools.dynamic]
 version = {attr = "netauth.__version__"}
 
 [tool.ruff]
-include = ["netauth/**", "setup.py"]
+include = ["netauth/**"]
 exclude = ["netauth/_pb"]
 line-length = 120
 indent-width = 4
