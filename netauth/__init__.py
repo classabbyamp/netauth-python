@@ -151,7 +151,7 @@ class NetAuth:
         }
         args.update(kwargs)
 
-        return NetAuth(**kwargs)
+        return cls(**args)
 
     def __connect(self, writable: bool = False):
         if writable:
