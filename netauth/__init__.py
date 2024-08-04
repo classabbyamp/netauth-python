@@ -128,7 +128,7 @@ class NetAuth:
         tls = cfg.get("tls", {})
         token = cfg.get("token", {})
 
-        cert = Path(tls.get("certificate"))
+        cert = Path(tls.get("certificate", "keys/tls.pem"))
         if not cert.is_absolute():
             cert = (path.parent / cert).absolute()
 
