@@ -20,6 +20,7 @@ classifiers = [
 dynamic = ["version"]
 dependencies = [
     "grpcio",
+    "protobuf",
 ]
 
 [project.optional-dependencies]
@@ -50,7 +51,7 @@ Repository = "https://github.com/netauth/netauth-python"
 Changelog = "https://github.com/netauth/netauth-python/blob/master/CHANGELOG.md"
 
 [tool.setuptools]
-packages=["netauth"]
+packages = ["netauth"]
 
 [tool.setuptools.dynamic]
 version = {attr = "netauth.__version__"}
